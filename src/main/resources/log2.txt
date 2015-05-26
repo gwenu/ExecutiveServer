@@ -1,0 +1,2 @@
+LOG_FILE_2 22:08:03,987  WARN FromVeryImportantPlace:3 - Do smth useful
+LOG_FILE_2 22:08:04,158  WARN FromVeryImportantPlace:4 - Smth useful

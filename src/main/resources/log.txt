@@ -1,0 +1,2 @@
+LOG_FILE_1 22:08:16,987  WARN FromVeryImportantPlace:1 - Caught exception while do smth useful
+LOG_FILE_1 22:08:17,158  WARN FromVeryImportantPlace:2 - Smth useful
