@@ -1,2 +1,20 @@
-LOG_FILE_1 22:08:16,987  WARN FromVeryImportantPlace:1 - Caught exception while do smth useful
-LOG_FILE_1 22:08:17,158  WARN FromVeryImportantPlace:2 - Smth useful
+LOG_FILE_1 21:15:01,987  WARN FromVeryImportantPlace:1 - Do smth useful
+LOG_FILE_1 21:15:02,158  WARN FromVeryImportantPlace:2 - Smth useful
+LOG_FILE_1 21:15:03,987  WARN FromVeryImportantPlace:3 - Do smth useful
+LOG_FILE_1 21:15:04,158  WARN FromVeryImportantPlace:4 - Smth useful
+LOG_FILE_1 21:15:05,987  WARN FromVeryImportantPlace:5 - Do smth useful
+LOG_FILE_1 21:15:06,158  WARN FromVeryImportantPlace:6 - Smth useful
+LOG_FILE_1 21:15:07,987  WARN FromVeryImportantPlace:7 - Do smth useful
+LOG_FILE_1 21:15:08,158  WARN FromVeryImportantPlace:8 - Smth useful
+LOG_FILE_1 21:15:09,987  WARN FromVeryImportantPlace:9 - Do smth useful
+LOG_FILE_1 21:15:10,158  WARN FromVeryImportantPlace:10 - Smth useful
+LOG_FILE_1 21:15:11,987  WARN FromVeryImportantPlace:11 - Do smth useful
+LOG_FILE_1 21:15:12,158  WARN FromVeryImportantPlace:12 - Caught exception while do smth useful
+LOG_FILE_1 21:15:13,987  WARN FromVeryImportantPlace:13 - Do smth useful
+LOG_FILE_1 21:15:14,158  WARN FromVeryImportantPlace:14 - Smth useful
+LOG_FILE_1 21:15:15,987  WARN FromVeryImportantPlace:15 - Do smth useful
+LOG_FILE_1 21:15:16,158  WARN FromVeryImportantPlace:16 - Smth useful
+LOG_FILE_1 21:15:17,987  WARN FromVeryImportantPlace:17 - Do smth useful
+LOG_FILE_1 21:15:18,158  WARN FromVeryImportantPlace:18 - Smth useful
+LOG_FILE_1 21:15:19,987  WARN FromVeryImportantPlace:19 - Do smth useful
+LOG_FILE_1 21:15:20,158  WARN FromVeryImportantPlace:20 - Smth useful

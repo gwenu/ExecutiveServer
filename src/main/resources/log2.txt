@@ -1,2 +1,20 @@
+LOG_FILE_2 22:08:01,987  WARN FromVeryImportantPlace:1 - Do smth useful
+LOG_FILE_2 22:08:02,158  WARN FromVeryImportantPlace:2 - Smth useful
 LOG_FILE_2 22:08:03,987  WARN FromVeryImportantPlace:3 - Do smth useful
 LOG_FILE_2 22:08:04,158  WARN FromVeryImportantPlace:4 - Smth useful
+LOG_FILE_2 22:08:05,987  WARN FromVeryImportantPlace:5 - Do smth useful
+LOG_FILE_2 22:08:06,158  WARN FromVeryImportantPlace:6 - Smth useful
+LOG_FILE_2 22:08:07,987  WARN FromVeryImportantPlace:7 - Do smth useful
+LOG_FILE_2 22:08:08,158  WARN FromVeryImportantPlace:8 - Smth useful
+LOG_FILE_2 22:08:09,987  WARN FromVeryImportantPlace:9 - Do smth useful
+LOG_FILE_2 22:08:10,158  WARN FromVeryImportantPlace:10 - Smth useful
+LOG_FILE_2 22:08:11,987  WARN FromVeryImportantPlace:11 - Do smth useful
+LOG_FILE_2 22:08:12,158  WARN FromVeryImportantPlace:12 - Smth useful
+LOG_FILE_2 22:08:13,987  WARN FromVeryImportantPlace:13 - Do smth useful
+LOG_FILE_2 22:08:14,158  WARN FromVeryImportantPlace:14 - Smth useful
+LOG_FILE_2 22:08:15,987  WARN FromVeryImportantPlace:15 - Do smth useful
+LOG_FILE_2 22:08:16,158  WARN FromVeryImportantPlace:16 - Smth useful
+LOG_FILE_2 22:08:17,987  WARN FromVeryImportantPlace:17 - Do smth useful
+LOG_FILE_2 22:08:18,158  WARN FromVeryImportantPlace:18 - Smth useful
+LOG_FILE_2 22:08:19,987  WARN FromVeryImportantPlace:19 - Do smth useful
+LOG_FILE_2 22:08:20,158  WARN FromVeryImportantPlace:20 - Smth useful

@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import ag.security.management.system.providers.DataProvider;
 import ag.security.management.system.providers.impl.FileLogProvider;
 import ag.security.management.system.services.Executable;
+import ag.security.management.system.services.impl.EventService;
 import ag.security.management.system.services.impl.LogService;
 
 public class ExecutiveServer {
@@ -37,6 +38,9 @@ public class ExecutiveServer {
 		Executable logService = new LogService(logProviders);
 		logService.proceed();
 		logService.shutdownAfterCompletion();
+		
+		Executable eventService = new EventService<String>(logProviders, new SharedQueue<String>());
+		eventService.proceed();
 	}
 
 	private static String getLogFilePath(String fileName) {
