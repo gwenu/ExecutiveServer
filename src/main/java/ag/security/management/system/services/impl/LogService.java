@@ -10,29 +10,34 @@ import java.util.concurrent.TimeUnit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import ag.security.management.system.executors.LogConsumer;
 import ag.security.management.system.executors.LogProducer;
-import ag.security.management.system.providers.LogProvider;
+import ag.security.management.system.providers.DataProvider;
 import ag.security.management.system.services.Executable;
 
 public class LogService implements Executable {
 
-	private Logger logger = LoggerFactory.getLogger(LogService.class);
+	private static Logger logger = LoggerFactory.getLogger(LogService.class);
 
 	private ExecutorService producer = Executors.newFixedThreadPool(2);
 	private ExecutorService consumer = Executors.newSingleThreadExecutor();
 	private BlockingQueue<String> sharedQueue = new LinkedBlockingQueue<String>();
 
-	private List<LogProvider> logProviders;
+	private List<DataProvider> logProviders;
 
-	public LogService(List<LogProvider> logProviders) {
+	public LogService(List<DataProvider> logProviders) {
 		this.logProviders = logProviders;
 	}
 
 	public void proceed() {
-		for (LogProvider provider : logProviders) {
-			Runnable logProducer = new LogProducer(consumer, sharedQueue, provider);
+		logger.info("LogService starts working...");
+		
+		for (DataProvider provider : logProviders) {
+			Runnable logProducer = new LogProducer(sharedQueue, provider);
 			producer.submit(logProducer);
 		}
+		
+		consumer.submit(new LogConsumer(sharedQueue));
 	}
 
 	public void shutdownAfterCompletion() {

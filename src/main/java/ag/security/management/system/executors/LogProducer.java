@@ -5,41 +5,36 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.ExecutorService;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import ag.security.management.system.providers.LogProvider;
+import ag.security.management.system.providers.DataProvider;
 
 public class LogProducer implements Runnable {
-	private Logger logger = LoggerFactory.getLogger(LogProducer.class);
+	private static Logger logger = LoggerFactory.getLogger(LogProducer.class);
 	
-	private ExecutorService consumer;
-	private LogProvider logProvider;
+	private DataProvider logProvider;
 	private BlockingQueue<String> sharedQueue;
 	
-	public LogProducer(ExecutorService consumer, BlockingQueue<String> sharedQueue, LogProvider logProvider) {
-		this.consumer = consumer;
+	public LogProducer(BlockingQueue<String> sharedQueue, DataProvider logProvider) {
 		this.sharedQueue = sharedQueue;
 		this.logProvider = logProvider;
 	}
 
 	public void run() {
 		String line;
-		InputStream iStream = logProvider.getLogs();
+		InputStream iStream = logProvider.getDataStream();
 		BufferedReader bufferReader = new BufferedReader(new InputStreamReader(iStream));
-		Runnable consume = new LogConsumer(sharedQueue);
 		
 		try {
 			while((line = bufferReader.readLine()) != null) {
 				sharedQueue.put(line);
-				consumer.submit(consume);
 			}
 		} catch (IOException e) {
 			logger.error("Cannot read line from log file: " + e.getStackTrace());
 		} catch (InterruptedException e) {
-			e.printStackTrace();
+			logger.info("" + e.getMessage());
 		}
 	}
 }

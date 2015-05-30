@@ -8,10 +8,10 @@ import java.io.InputStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import ag.security.management.system.providers.LogProvider;
+import ag.security.management.system.providers.DataProvider;
 
-public class FileLogProvider implements LogProvider {
-	private Logger logger = LoggerFactory.getLogger(FileLogProvider.class);
+public class FileLogProvider implements DataProvider {
+	private static Logger logger = LoggerFactory.getLogger(FileLogProvider.class);
 	
 	private String logPath;
 	
@@ -19,7 +19,7 @@ public class FileLogProvider implements LogProvider {
 		this.logPath = logPath;
 	}
 	
-	public InputStream getLogs() {
+	public InputStream getDataStream() {
 		InputStream iStream = null;
 		File logFile = new File(logPath);
 		

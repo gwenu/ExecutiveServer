@@ -13,7 +13,7 @@ public class LogConsumer implements Runnable {
 	public void run() {
 		while(shareQueue.size() != 0) {
 			try {
-				System.out.println(shareQueue.take());
+				System.out.println("LogConsumer " + shareQueue.take());
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
